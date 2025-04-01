@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(45deg, rgb(59, 21, 136) 15%, rgb(217, 194, 240) 100%) no-repeat center center fixed;
+}
+
+::-webkit-scrollbar {
+    width: 0; 
+    height: 0; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+}   
