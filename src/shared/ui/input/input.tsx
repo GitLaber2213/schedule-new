@@ -1,5 +1,5 @@
 import { InputHTMLAttributes } from "react";
-import { AuthInput, DashboardInput, StyledCheckBox } from "./input.styles";
+import { AuthInput, DashboardInput, SmallInput, StyledCheckBox } from "./input.styles";
 import { InputVariations } from "./input-variations";
 
 type Props = {
@@ -9,7 +9,9 @@ type Props = {
 const getInputType = (type: InputVariations) => ({
     [InputVariations.AUTH]: AuthInput,
     [InputVariations.DASHBOARD]: DashboardInput,
-    [InputVariations.CHECK_BOX]: StyledCheckBox
+    [InputVariations.CHECK_BOX]: StyledCheckBox,
+    [InputVariations.SMALL]: SmallInput
+
 
 }[type] || AuthInput);
 

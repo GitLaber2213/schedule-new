@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 
 
-export const WidgetsLayout = styled.div`
+export const WidgetLayout = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,14 +18,15 @@ export const WidgetsLayout = styled.div`
     border-bottom: 2px solid rgba(217, 206, 243, 0.8);
 `;  
 
-export const PagesLayout = styled.div`
+export const PageLayout = styled.div`
     display: grid;
     justify-items: center;
     align-items: center;
 `;
 
-export const PanelsLayout = styled(WidgetsLayout) `
+export const PanelLayout = styled(WidgetLayout) `
     margin: 0;
+    height: 100%;
     width: 100%;
     box-sizing: border-box; 
     margin-bottom: 5px;

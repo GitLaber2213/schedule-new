@@ -63,7 +63,7 @@ const StyledCell = ({ children, isDateOnCurrentMonth }: PropsChildren) => {
     const type = useTableTypeContext();
     const { Cell } = getTableType(type);
 
-    return <Cell isDateOnCurrentMonth={isDateOnCurrentMonth}>{children}</Cell>
+    return <Cell $isDateOnCurrentMonth={isDateOnCurrentMonth}>{children}</Cell>
 };
 
 const StyledRow = ({ children }: PropsChildren) => {

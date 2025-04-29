@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes } from "react";
 import { ButtonVariations } from "./button-variations"
-import { AuthButton, BasicButton, CalendarSelectorButton, DeleteButton, ErrorButton, LightButton, SuccessButton, SwitchThemeButton } from "./button.styles"
+import { AuthButton, BackButton, BasicButton, CalendarSelectorButton, DataControlButton, ErrorButton, LightButton, SuccessButton, SwitchThemeButton } from "./button.styles"
 import { HoverBgColorVariations } from "./hover-bg-color-variations";
 
 
@@ -18,12 +18,25 @@ const getButtonType = (type: ButtonVariations) => ({
     [ButtonVariations.AUTH]: AuthButton,
     [ButtonVariations.SWITCH_THEME]: SwitchThemeButton,
     [ButtonVariations.LIGHT_BUTTON]: LightButton,
-    [ButtonVariations.DELETE_BUTTON]: DeleteButton,
+    [ButtonVariations.DATA_CONTROL_BUTTON]: DataControlButton,
+    [ButtonVariations.BACK_BUTTON]: BackButton,
 
 }[type] || BasicButton);
 
 export const Button = ({ children, type_, hoverColor, ...buttonHtmlAttributes }: Props) => {
     const StyledButton = getButtonType(type_);
 
-    return <StyledButton hoverColor={hoverColor} {...buttonHtmlAttributes}>{children}</StyledButton>
+    let defaultHoverColor;
+    
+    if(!hoverColor) {
+        defaultHoverColor = HoverBgColorVariations.GREEN
+    } else {
+        defaultHoverColor = hoverColor
+    }
+
+
+
+
+
+    return <StyledButton $hoverColor={defaultHoverColor} {...buttonHtmlAttributes}>{children}</StyledButton>
 };

@@ -5,7 +5,6 @@ export const ListOfAddedData = styled.div`
     width: 100%;
     min-height: 50px;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     background-color: rgba(217, 206, 243, 0.4);
 
@@ -22,7 +21,6 @@ export const ListOfAddedData = styled.div`
 
 export const BorderBlock = styled.div`
     display: flex;
-    height: 70%;
     padding: 0 15px;
     margin: 10px 0;
     align-items: center;

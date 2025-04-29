@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 import { LayoutVariations } from "./layout-variations"
-import { PagesLayout, PanelsLayout, WidgetsLayout } from "./layout.styles"
+import { PageLayout, PanelLayout, WidgetLayout } from "./layout.styles"
 
 type Props = {
     children: React.ReactNode;
@@ -8,9 +8,9 @@ type Props = {
 } & HTMLAttributes<HTMLDivElement>;
 
 const getLayoutType = (type: LayoutVariations) => ({
-    [LayoutVariations.WIDGET]: WidgetsLayout,
-    [LayoutVariations.PAGE]: PagesLayout,
-    [LayoutVariations.PANEL]: PanelsLayout,
+    [LayoutVariations.WIDGET]: WidgetLayout,
+    [LayoutVariations.PAGE]: PageLayout,
+    [LayoutVariations.PANEL]: PanelLayout,
 } [type]);
 
 export const Layout = ({children, type, ...HTMLAttributes}: Props) => {

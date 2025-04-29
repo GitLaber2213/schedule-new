@@ -16,11 +16,18 @@ export const AuthInput = styled.input`
     background-color: rgba(217, 206, 243, 0.4);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     font-weight: 600;
+    outline: none;
     font-size: 16px;
     box-sizing: border-box;
+    border: 2px solid transparent;
+    transition: border .2s;
 
     &::placeholder {
         color: rgb(255, 255, 255);
+    }
+
+    &:focus {
+        border-color: white;
     }
 `;
 
@@ -35,10 +42,20 @@ export const StyledCheckBox = styled.input.attrs({ type: 'checkbox' })`
     width: 20px;
     height: 20px;
     appearance: none;
-    background-color: #fff;
+    background-color: white;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all .2s ease;
+
+    &:focus {
+        outline: 1px solid black;
+    }
+
+    &:checked:focus {
+        outline: 1px solid white;
+    }
+
+
     &:checked {
         background-color:rgb(85, 96, 143);
     }
@@ -55,4 +72,17 @@ export const StyledCheckBox = styled.input.attrs({ type: 'checkbox' })`
         transform: rotate(45deg);
         transition: all 0.3s ease;
     }
+`;
+
+
+
+export const SmallInput = styled(DashboardInput)`
+    height: 30px;
+    font-size: 14px;
+    margin: 0;
+
+    &::placeholder {
+        font-size: 14px;
+    }
+
 `;

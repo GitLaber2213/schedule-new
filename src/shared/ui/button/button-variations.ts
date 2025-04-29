@@ -6,5 +6,6 @@ export enum ButtonVariations {
     AUTH = 'auth',
     SWITCH_THEME = 'switch_theme',
     LIGHT_BUTTON = 'light_button',
-    DELETE_BUTTON = 'delete_button',
+    DATA_CONTROL_BUTTON = 'data_control_button',
+    BACK_BUTTON = 'back_button',
 }

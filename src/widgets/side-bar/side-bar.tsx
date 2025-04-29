@@ -1,5 +1,5 @@
 'use client'
-import { TabBar, UserInfo } from "@/features";
+import { NavBar, UserInfo } from "@/features";
 import { Scroll } from "@/shared";
 import styled from "styled-components";
 
@@ -24,7 +24,7 @@ export const SideBarWidget = () => {
         <SideBarContainer>
             <UserInfo />
             <Scroll>
-                <TabBar />
+                <NavBar />
             </Scroll>
         </SideBarContainer>
     )

@@ -1,5 +1,5 @@
-import { ControlPanelWidget } from "@/widgets/control-panel/control-panel";
+import { HelloPanelWidget } from "@/widgets";
 
 export default function Dashboard() {
-    return <ControlPanelWidget />;
+    return <HelloPanelWidget />;
 }

@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 type StyledCellProps = {
-    isDateOnCurrentMonth?: boolean;
+    $isDateOnCurrentMonth?: boolean;
 }
 
 export const ScheduleTable = styled.div`
@@ -91,7 +91,7 @@ export const CalendarTableCell = styled.td<StyledCellProps>`
         color: red;
     }
         
-    ${({ isDateOnCurrentMonth }) => !isDateOnCurrentMonth && `
+    ${({ $isDateOnCurrentMonth }) => !$isDateOnCurrentMonth && `
         background-color: transparent;
         color: rgba(255, 255, 255, 0.5);
     `}
